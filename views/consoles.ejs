@@ -1,0 +1,13 @@
+const mongoose = require('mongoose');
+
+const consoleSchema = new mongoose.Schema({
+  image: {type:String},
+  name: {type:String, required: true},
+  processor: {type:String},
+  ram: {type:Number},
+  capacity: {type:Number},
+  year: {type:Number},
+  rrp: {type:Number, required: true}
+});
+
+module.exports = mongoose.model('Console', consoleSchema);

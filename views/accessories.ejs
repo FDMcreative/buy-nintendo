@@ -1,0 +1,9 @@
+const mongoose = require('mongoose');
+
+const accessorySchema = new mongoose.Schema({
+  image: {type:Stripe},
+  name: {type:String},
+  rrp: {type:Number}
+});
+
+module.exports = mongoose.model('Accessory', acessorySchema);
