@@ -8,8 +8,8 @@ mongoose.Promise = require('bluebird');
 const databaseURI = 'mongodb://localhost/buy-nintendo';
 mongoose.connect(databaseURI);
 
-const Console = require('.models/console');
-const Accessory = require('.models/accessory');
+const Device = require('./models/device');
+const Accessory = require('./models/accessory');
 
 const app = express();
 
@@ -26,22 +26,22 @@ app.get('/',(req,res) => {
   res.render('index');
 });
 
-app.get('/consoles',(req,res) => {
-  Console
-  .find()
-  .sort({name:-1})
-  .exec()
-  .then( (records) => {
-    res.render('consoles',{records});
+app.get('/devices',(req,res) => {
+  Device
+    .find()
+    .sort({name:-1})
+    .exec()
+    .then( (records) => {
+      res.render('devices',{records});
   });
 });
 
 app.get('/accessories',(req,res) => {
   Accessory
-  .find()
-  .exec()
-  .then( (records) => {
-    res.render('accessories',{records});
+    .find()
+    .exec()
+    .then( (records) => {
+      res.render('accessories',{records});
   });
 });
 

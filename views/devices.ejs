@@ -1,0 +1,33 @@
+<div class="row">
+  <% records.forEach((record) => { %>
+    <div class="col-md-6">
+      <img class="img-fluid" src="<%= record.image %>" alt="<%= record.name %>">
+      <h4><%= record.name %></h4>
+      <h6><%= record.punchLine %></h6>
+      <p>
+        Specs:
+        <table class="table table-striped">
+          <tbody>
+            <tr>
+              <td>Processor</td>
+              <td><%= record.processor %> GB</td>
+            </tr>
+            <tr>
+              <td>Ram</td>
+              <td><%= record.ram %></td>
+            </tr>
+            <tr>
+              <td>Capacity</td>
+              <td><%= record.capacity %> GB</td>
+            </tr>
+            <tr>
+              <td>Year</td>
+              <td><%= record.year %> GB</td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+      <p>&euros;<%= record.rrp %></p>
+    </div>
+  <% }) %>
+</div>
