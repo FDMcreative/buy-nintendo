@@ -12,23 +12,23 @@ Accessory.collection.drop();
 
 Device
   .create([{
-    image: '../public/images/switch.jpg',
+    image: '/images/switch.jpg',
     name: 'Switch',
     punchLine: 'Switch and Play',
-    processor: 'Qauntum',
-    ram: 8,
-    capacity: 32,
-    year: 2016,
-    rrp: 269.99
+    processor: 'Octa-core (4×ARM Cortex-A57 & 4×ARM Cortex-A53) @ 1.020 GHz',
+    ram: '4 GB',
+    capacity: '32 GB',
+    year: 2017,
+    rrp: 329.99
   }, {
-    image: '../public/images/n64.jpg',
+    image: '/images/n64.jpg',
     name: 'N64',
-    punchLine: 'bip bip ballerina',
-    processor: 'amd efdf',
-    ram: 4,
-    capacity: 16,
-    year: 1997,
-    rrp: 369.99
+    punchLine: 'Get N or Get Out',
+    processor: '64-bit NEC VR4300 @ 93.75 MHz',
+    ram: '4 MB',
+    capacity: '64 MB',
+    year: 1996,
+    rrp: 199.99
   }])
   .then( (devices) => {
     console.log(`${devices.length} devices created`);

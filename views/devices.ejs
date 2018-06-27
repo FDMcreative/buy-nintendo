@@ -3,14 +3,14 @@
     <div class="col-md-6">
       <img class="img-fluid" src="<%= record.image %>" alt="<%= record.name %>">
       <h4><%= record.name %></h4>
-      <h6><%= record.punchLine %></h6>
+      <h6>"<%= record.punchLine %>"</h6>
       <p>
         Specs:
         <table class="table table-striped">
           <tbody>
             <tr>
               <td>Processor</td>
-              <td><%= record.processor %> GB</td>
+              <td><%= record.processor %></td>
             </tr>
             <tr>
               <td>Ram</td>
@@ -18,16 +18,16 @@
             </tr>
             <tr>
               <td>Capacity</td>
-              <td><%= record.capacity %> GB</td>
+              <td><%= record.capacity %></td>
             </tr>
             <tr>
               <td>Year</td>
-              <td><%= record.year %> GB</td>
+              <td><%= record.year %></td>
             </tr>
           </tbody>
         </table>
       </p>
-      <p>&euros;<%= record.rrp %></p>
+      <p>&euro;<%= record.rrp %></p>
     </div>
   <% }) %>
 </div>

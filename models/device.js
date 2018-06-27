@@ -5,8 +5,8 @@ const deviceSchema = new mongoose.Schema({
   name: {type:String, required: true},
   punchLine: {type:String},
   processor: {type:String},
-  ram: {type:Number},
-  capacity: {type:Number},
+  ram: {type:String},
+  capacity: {type:String},
   year: {type:Number},
   rrp: {type:Number, required: true}
 });

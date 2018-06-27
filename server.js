@@ -29,7 +29,7 @@ app.get('/',(req,res) => {
 app.get('/devices',(req,res) => {
   Device
     .find()
-    .sort({name:-1})
+    .sort({year:1})
     .exec()
     .then( (records) => {
       res.render('devices',{records});
